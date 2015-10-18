@@ -17,7 +17,10 @@ class EntryQuerySet(models.QuerySet):
 class Blog(models.Model):
     title = CharField(max_length=100)
     slug = models.SlugField(max_length=200, unique=True, null=True)
-    body = RedactorField(verbose_name=u'Text', redactor_options={'plugins': ['imagemanager']})
+    body = RedactorField(
+        verbose_name=u'Text',
+        redactor_options={}
+    )
     published = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -13,7 +13,9 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+from django.conf import settings
 from django.conf.urls import include, url, patterns
+from django.conf.urls.static import static
 from django.contrib import admin
 
 from blog.views import BlogDetail
@@ -27,4 +29,4 @@ urlpatterns = patterns(
     url(r'^resources/', 'blog.views.resources', name='resources'),
     url(r'^blog/', 'blog.views.blog', name='blog'),
     url(r'^entry/(?P<slug>\S+)$', BlogDetail.as_view(), name="entry_detail"),
-)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

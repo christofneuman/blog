@@ -24,7 +24,7 @@
     <div class="post">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <h2><a href="{% url 'entry_detail' slug=post.slug %}">{{ post.title }}</a></h2>
                     <p class="meta">
                         <b>{{ post.created_at }}</b>
@@ -35,9 +35,6 @@
                     <div class="read-more pull-right">
                         <a href="{% url 'entry_detail' slug=post.slug %}">Read More</a>
                     </div>
-                </div>
-                <div id="individual-blog-image" class="col-md-4">
-                  <img class="img-responsive" src="{% static 'images/uksedN.jpg' %}" alt="">
                 </div>
             </div>
         </div>
