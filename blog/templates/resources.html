@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block extra_js %}
+
+  <script>
+  $(document).ready(function() {
+    var words = [
+      'Awe', 'Admiration', 'Appreciation', 'Beauty', 'Bliss', 'Brotherhood', 'Calm', 'Compassion', 'Comprehension',
+      'Cooperation', 'Courage', 'Creativity', 'Detachment', 'Delight', 'Energy', 'Enthusiasm', 'Eternity', 'Faith',
+      'Forgiveness', 'Freedom', 'Friendship', 'Generosity', 'Goodness', 'Goodwill', 'Grace', 'Gratitude', 'Harmony',
+      'Honor', 'Humor', 'Inclusiveness', 'Infinity', 'Intuition', 'Joy', 'liberation', 'Light', 'Love', 'Order',
+      'Patience', 'Peace', 'Positiveness', 'Power', 'Prosperity', 'Renewal', 'Resposibility', 'Serenity', 'Service',
+      'Silence', 'Surrender', 'Synthesis', 'Trust', 'Truth', 'Understanding', 'Universality', 'Vitality',
+      'Wellbeing', 'Wholeness', 'Willpower', 'Wisdom', 'Wonder'
+    ]
+    $('#draw-card').click(function() {
+      randomNumber = Math.floor(Math.random() * 59);
+      document.getElementById("word").textContent = words[randomNumber];
+    });
+  });
+  </script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container sensation-words">
+  <div class="row">
+    <div class="col-sm-8 text-center">
+      <h3> Daily inspirational word</h3>
+      <div id="card-holder">
+        <button id="draw-card" href ="">
+          <img class="img-responsive" src="{% static 'images/taga.jpg' %}" alt="">
+          <div id="word"></div>
+          Click here
+        </button>
+      </div>
+      <p>
+        Roberto Assagioli, the founder of Psychosynthesis, suggested that in order to connect with the wiser part within us we meditate on qualities that support openness and a loving state of being. He referred to this part as a transpersonal aspect of human psyche.
+        <br><br>
+        It is the part within each one of us that helps us to move towards wholeness and harmony, urging us to improve and grow. It is the spiritual part of us that is connected to something greater in the Universe, whether be it called Great Spirit, God or Goddess, Universal Energy or by another name. This aspect directs us to seek a greater meaning and connectedness in life, transcending the survival level of our existence.
+      </p>
+      <h3> Some suggestions for working with the cards:</h3>
+      <ul>
+        <li>
+          Choose a card in the morning to activate positive energy in your day
+        </li>
+        <li>
+          Allow the association and images with this word flow freely
+        </li>
+        <li>
+          Observe your feelings and sensations, without judgments or expectations
+        </li>
+        <li>
+          Journal about your thoughts or paint the image (if you have more time available)
+        </li>
+        <li>
+          Imagine fully embodying this quality and keeping it in your awareness throughout your day
+        </li>
+        <li>
+          Write it down for yourself and keep it where you can see it to support a fuller integration of this quality in your life.
+        </li>
+      </ul>
+      <p>
+        If you experience challenges in owning this quality, pay attention to your judgments and journal about it. This will support your exploration of the origin of them. You may find that you have internalized other people’s judgments. This process will help you to forgive and let them go.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Downloads</h3>
+      <ul>
+        <li>
+          <a href="">Feeling words</a><br>
+          <img class="img-responsive hr-image" src="{% static 'images/hr-image.jpg' %}" alt="">
+        </li>
+        <li>
+          <a href="">Sensation words</a><br>
+          <img class="img-responsive hr-image" src="{% static 'images/hr-image.jpg' %}" alt="">
+        </li>
+        <li>
+          <a href="">Guided meditations <br>(COMING SOON!)</a><br>
+          <img class="img-responsive hr-image" src="{% static 'images/hr-image.jpg' %}" alt="">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

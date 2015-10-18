@@ -1,0 +1,303 @@
+body {
+    padding-top: 70px;
+    background: #fff;
+    color: #333;
+}
+
+h3 {
+  font-size: 2em;
+  color: #2E0854;
+}
+
+.navbar-default {
+  background: #fff;
+  border-bottom: #ffcccc 1px solid;
+  margin-bottom: 0;
+}
+
+.navbar-default .navbar-nav li a {
+  color: #947b9a;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  background: #FFCCCC;
+  border-radius: 2px;
+  color: #947b9a;
+}
+
+/* Home page */
+.header {
+  margin: auto;
+  text-align: center;
+}
+
+.headerImage {
+  margin: auto;
+  margin-top: -20px;
+
+}
+
+header, section {
+  margin-bottom: 50px;
+}
+
+.intro-text {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 1.5em;
+  color: #947b9a;
+}
+#about h4 {
+  font-style: italic;
+  color: #009999;
+  margin-top: 25px;
+}
+
+#skype-me {
+  text-align: center;
+  font-size: 18px;
+  color:#009999;
+  font-style: italic;
+}
+
+#contact label {
+  font-weight: 400;
+
+}
+
+/* Modals */
+
+.portfolio-link:hover {
+    color: #FFCCCC;
+    text-decoration: none;
+}
+
+.portfolio-link p {
+  letter-spacing: 1px;
+}
+
+.portfolio-item {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@media(max-width:768px) {
+  .portfolio-item {
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio-item a {
+    color: #009999;
+}
+
+.portfolio-item a:hover {
+  color: #947b9a;
+}
+
+.modal_holder1 {
+    background: url('/static/images/varav.jpg') center no-repeat;
+    height: 200px;
+    margin-bottom: 5px;
+}
+
+.modal_holder1:hover {
+    opacity: .8;
+}
+
+.modal_holder2 {
+    background: url('/static/images/siniallikad.jpg') center no-repeat;
+    height: 200px;
+    margin-bottom: 5px;
+}
+
+.modal_holder2:hover {
+    opacity: .8;
+}
+
+.modal_holder3 {
+    background: url('/static/images/pilved.jpg') center no-repeat;
+    height: 200px;
+    margin-bottom: 5px;
+}
+
+.modal_holder3:hover {
+    opacity: .8;
+}
+
+.hr-image{
+  margin: auto;
+}
+
+.portfolio-modal {
+  margin: auto;
+  margin-top: 50px;
+}
+
+.modal-body h2 {
+  text-align: center;
+}
+
+.modal-body img {
+  margin: auto;
+  height: 300px;
+  margin-bottom: 25px;
+}
+
+/* blog page */
+
+.blog-header {
+  margin: auto;
+  margin-top: -20px;
+}
+
+h4 {
+  font-style: italic;
+  color: #352938;
+}
+
+#individual-blog-image {
+  margin-top: 63px;
+}
+
+.post {
+    padding-bottom: 50px;
+}
+
+.post b {
+    color: #009999;
+}
+
+.post h2 a{
+    color: #333;
+}
+
+.read-more a {
+    color: #009999;
+    font-size: 16px;
+}
+
+/* single blog post */
+.single-post {
+  margin-bottom: 250px;
+}
+
+.single-post  b {
+    color: #009999;
+}
+
+.single-post h2 a{
+    color: #333;
+}
+
+.single-post img {
+  margin-top: 63px;
+}
+
+/* resources */
+
+.sensation-words {
+  margin-top: 50px;
+}
+
+#card-holder {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#draw-card {
+  position: relative;
+}
+
+#word {
+  position: absolute;
+  font-style: italic;
+  letter-spacing: 2px;
+  top: 80px;
+  left: 50px;
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+}
+
+@media(max-width: 490px) {
+  #word {
+    left: 30px;
+    top: 60px;
+  }
+}
+
+.sensation-words .col-sm-4 {
+  margin-bottom: 100px;
+}
+
+.sensation-words h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #009999;
+}
+
+.sensation-words .col-sm-8 {
+  text-align: left;
+   margin-bottom: 50px;
+}
+
+.sensation-words .col-sm-8 button{
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+.sensation-words .col-sm-8 ul li{
+  margin-bottom: 15px;
+}
+
+.sensation-words .col-sm-4 ul {
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+
+.sensation-words .col-sm-4 ul li img{
+  margin-bottom: 25px;
+}
+
+.sensation-words .col-sm-4 a {
+  color: #009999;
+}
+
+.sensation-words .col-sm-4 a:hover {
+  color: #2E0854;
+  text-decoration: none;
+  border-bottom: 2px solid #2E0854;
+}
+
+
+/* footer */
+
+.footer-above {
+    margin-top: 100px;
+}
+
+.info h4 {
+  text-align: left;
+}
+
+.info p {
+  text-align: left;
+}
+
+@media(max-width: 767px) {
+    .footer {
+      text-align: center;
+    }
+
+    .info h4 {
+      text-align: center;;
+    }
+    .info p {
+      text-align: center;;
+    }
+}
+}
