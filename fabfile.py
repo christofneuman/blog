@@ -18,7 +18,7 @@ def deploy():
     pip()
     migrate()
     print(yellow('Collectstatic'))
-    run('cd /srv/%s/app/ && . /srv/%s/env/bin/activate && python manage.py collectstatic' % (project, project))
+    run('cd /srv/%s/app/ && . /srv/%s/env/bin/activate && python manage.py collectstatic --noinput' % (project, project))
     #messages()
     restart()
 

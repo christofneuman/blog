@@ -1,5 +1,7 @@
+from django.conf import settings
 from django.db import models
-from django import forms
+from django.core.mail import EmailMultiAlternatives
+from django.template import loader
 from django.core.urlresolvers import reverse
 from django.db.models import CharField, EmailField
 from redactor.fields import RedactorField
@@ -38,4 +40,20 @@ class ContactMe(models.Model):
     name = CharField(max_length=100)
     email = EmailField(max_length=254)
     message = CharField(max_length=800)
-    botcheck = forms.CharField(max_length=5)
+
+    def save(self, *args, **kwargs):
+        super(ContactMe, self).save(*args, **kwargs)
+        txt = loader.render_to_string('templates/email.txt', {
+            'name': self.name,
+            'email': self.email,
+            'message': self.message,
+        })
+
+        msg = EmailMultiAlternatives(
+            subject='Website inquiry from ' + self.email,
+            body=txt,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            to=["christofneuman@hotmail.com"]
+        )
+
+        msg.send()

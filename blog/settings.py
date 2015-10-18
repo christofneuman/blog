@@ -54,6 +54,19 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
+# E-mail
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# E-mail
+DEFAULT_FROM_EMAIL = 'kyllikineuman.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.postmarkapp.com'
+EMAIL_HOST_USER = 'christof@namespace.ee'
+EMAIL_HOST_PASSWORD = 'qSqMN_ZdtE5a1LbHLyGlSw'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
 ROOT_URLCONF = 'blog.urls'
 
 TEMPLATES = [
