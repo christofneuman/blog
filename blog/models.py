@@ -3,7 +3,7 @@ from django.db import models
 from django.core.mail import EmailMultiAlternatives
 from django.template import loader
 from django.core.urlresolvers import reverse
-from django.db.models import CharField, EmailField, ImageField
+from django.db.models import CharField, EmailField
 from redactor.fields import RedactorField
 
 # Create your models here.
@@ -47,7 +47,7 @@ class ContactMe(models.Model):
 
     def save(self, *args, **kwargs):
         super(ContactMe, self).save(*args, **kwargs)
-        txt = loader.render_to_string('templates/email.txt', {
+        txt = loader.render_to_string('email/email.txt', {
             'name': self.name,
             'email': self.email,
             'message': self.message,

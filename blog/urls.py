@@ -26,6 +26,7 @@ urlpatterns = patterns(
     url(r'^redactor/', include('redactor.urls')),
 
     url(r'^$', 'blog.views.home', name='home'),
+    url(r'^thanks/$', 'blog.views.thanks', name='thanks'),
     url(r'^resources/', 'blog.views.resources', name='resources'),
     url(r'^blog/', 'blog.views.blog', name='blog'),
     url(r'^entry/(?P<slug>\S+)$', BlogDetail.as_view(), name="entry_detail"),

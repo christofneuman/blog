@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'redactor',
+    'widget_tweaks',
 
     'blog',
 )
@@ -55,12 +56,12 @@ MIDDLEWARE_CLASSES = (
 )
 
 # E-mail
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # E-mail
 DEFAULT_FROM_EMAIL = 'kyllikineuman.com'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.postmarkapp.com'
+EMAIL_HOST = 'smtp.mandrillapp.com'
 EMAIL_HOST_USER = 'christof@namespace.ee'
 EMAIL_HOST_PASSWORD = 'qSqMN_ZdtE5a1LbHLyGlSw'
 EMAIL_PORT = 587

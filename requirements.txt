@@ -1,3 +1,5 @@
 django
 django-wysiwyg-redactor
 pillow
+
+django-widget-tweaks

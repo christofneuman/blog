@@ -1,11 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic
 
 from blog.models import Blog
 
+from blog.forms import ContactMeForm
+
 
 def home(request):
-    return render(request, "home.html", {})
+    form = ContactMeForm(request.POST)
+
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect('thanks')
+
+    return render(request, "home.html", {
+        'form': form
+    })
+
+
+def thanks(request):
+    return render(request, 'thanks.html', {})
 
 
 def resources(request):

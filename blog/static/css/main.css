@@ -136,6 +136,7 @@ header, section {
 
 .modal-body h2 {
   text-align: center;
+  margin-top: 50px;
 }
 
 .modal-body img {
@@ -307,4 +308,11 @@ header, section {
       text-align: center;;
     }
 }
+
+#thanks {
+  margin-bottom: 500px;
+}
+
+.errorlist {
+  color: red;
 }
