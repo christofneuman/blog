@@ -20,7 +20,7 @@ h3 {
 }
 
 .navbar-default .navbar-nav li a:hover {
-  background: #FFCCCC;
+  background: #99D6D6;
   border-radius: 2px;
   color: #947b9a;
 }
@@ -144,6 +144,10 @@ header, section {
   margin-bottom: 25px;
 }
 
+.modal-skype {
+  color: #009999;
+}
+
 /* blog page */
 
 .blog-header {
@@ -151,9 +155,12 @@ header, section {
   margin-top: -20px;
 }
 
-h4 {
+.col-md-10 h4 {
+  margin-top: 10px;
   font-style: italic;
-  color: #352938;
+  font-size: 1.5em;
+  color: #947b9a;
+  margin-bottom: 50px;
 }
 
 #individual-blog-image {

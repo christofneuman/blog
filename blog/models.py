@@ -3,7 +3,7 @@ from django.db import models
 from django.core.mail import EmailMultiAlternatives
 from django.template import loader
 from django.core.urlresolvers import reverse
-from django.db.models import CharField, EmailField
+from django.db.models import CharField, EmailField, ImageField
 from redactor.fields import RedactorField
 
 # Create your models here.
@@ -17,6 +17,7 @@ class EntryQuerySet(models.QuerySet):
 class Blog(models.Model):
     title = CharField(max_length=100)
     slug = models.SlugField(max_length=200, unique=True, null=True)
+    image_preview = models.ImageField(upload_to='blogs')
     body = RedactorField(
         verbose_name=u'Text',
         redactor_options={}

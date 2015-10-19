@@ -6,7 +6,7 @@
 <div class="container">
   <img class="img-responsive blog-header" src="{% static 'images/uksed-header-name.jpg' %}" alt="">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
             <h4>
                 Have patience with everything in your heart…love the
                 questions themselves as if they were locked rooms or
@@ -24,7 +24,7 @@
     <div class="post">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
                     <h2><a href="{% url 'entry_detail' slug=post.slug %}">{{ post.title }}</a></h2>
                     <p class="meta">
                         <b>{{ post.created_at }}</b>
@@ -35,6 +35,9 @@
                     <div class="read-more pull-right">
                         <a href="{% url 'entry_detail' slug=post.slug %}">Read More</a>
                     </div>
+                </div>
+                <div id="individual-blog-image" class="col-md-4">
+                    <img class="img-responsive" src="{{ post.image_preview.url }}">
                 </div>
             </div>
         </div>
