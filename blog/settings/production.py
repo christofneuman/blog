@@ -5,7 +5,7 @@ from blog.settings import *
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'beehive',
+        'NAME': 'kylliki',
     }
 }
 
