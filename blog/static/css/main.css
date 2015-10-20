@@ -51,6 +51,7 @@ header, section {
   font-style: italic;
   color: #009999;
   margin-top: 25px;
+  text-align: center;
 }
 
 #skype-me {
@@ -147,6 +148,7 @@ header, section {
 
 .modal-skype {
   color: #009999;
+  margin-bottom: 40px;
 }
 
 /* blog page */

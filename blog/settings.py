@@ -59,7 +59,7 @@ MIDDLEWARE_CLASSES = (
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # E-mail
-DEFAULT_FROM_EMAIL = 'kyllikineuman.com'
+DEFAULT_FROM_EMAIL = 'kyllikyfreyja@hotmail.com'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mandrillapp.com'
 EMAIL_HOST_USER = 'christof@namespace.ee'

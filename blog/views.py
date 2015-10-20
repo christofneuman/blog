@@ -7,7 +7,7 @@ from blog.forms import ContactMeForm
 
 
 def home(request):
-    form = ContactMeForm(request.POST)
+    form = ContactMeForm(request.POST or None)
 
     if request.method == 'POST':
         if form.is_valid():

@@ -4,6 +4,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template import loader
 from django.core.urlresolvers import reverse
 from django.db.models import CharField, EmailField
+from django.utils import timezone
 from redactor.fields import RedactorField
 
 # Create your models here.
@@ -44,9 +45,16 @@ class ContactMe(models.Model):
     name = CharField(max_length=100)
     email = EmailField(max_length=254)
     message = CharField(max_length=800)
+    sent_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
         super(ContactMe, self).save(*args, **kwargs)
+        if self.sent_at is None:
+            self.send()
+
+    def send(self):
         txt = loader.render_to_string('email/email.txt', {
             'name': self.name,
             'email': self.email,
@@ -57,7 +65,10 @@ class ContactMe(models.Model):
             subject='Website inquiry from ' + self.email,
             body=txt,
             from_email=settings.DEFAULT_FROM_EMAIL,
+            reply_to=[self.email],
             to=["christofneuman@hotmail.com"]
         )
 
         msg.send()
+        self.sent_at = timezone.now()
+        self.save(update_fields=['sent_at'])
