@@ -1,5 +1,5 @@
 # coding: utf-8
-from kylliki.settings import *
+from blog.settings import *
 
 # Database
 DATABASES = {

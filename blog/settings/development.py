@@ -1,6 +1,5 @@
 # coding: utf-8
-from kylliki.settings import *
+from blog.settings import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
