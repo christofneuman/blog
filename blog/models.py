@@ -62,11 +62,11 @@ class ContactMe(models.Model):
         })
 
         msg = EmailMultiAlternatives(
-            subject='Website inquiry from ' + self.email,
+            subject='Website inquiry from ' + self.name,
             body=txt,
             from_email=settings.DEFAULT_FROM_EMAIL,
             reply_to=[self.email],
-            to=["christofneuman@hotmail.com"]
+            to=["kyllikifreyja@hotmail.com"]
         )
 
         msg.send()
