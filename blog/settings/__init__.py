@@ -59,7 +59,7 @@ MIDDLEWARE_CLASSES = (
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # E-mail
-DEFAULT_FROM_EMAIL = 'kyllikyfreyja@hotmail.com'
+DEFAULT_FROM_EMAIL = 'kyllikineuman@gmail.com'
 
 ROOT_URLCONF = 'blog.urls'
 

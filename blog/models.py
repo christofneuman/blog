@@ -66,7 +66,7 @@ class ContactMe(models.Model):
             body=txt,
             from_email=settings.DEFAULT_FROM_EMAIL,
             reply_to=[self.email],
-            to=["kyllikifreyja@hotmail.com"]
+            to=["kyllikineuman@gmail.com"]
         )
 
         msg.send()
