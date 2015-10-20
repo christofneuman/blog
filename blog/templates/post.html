@@ -6,7 +6,7 @@
 <div class="single-post">
     <div class="container">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-8">
               <h2>{{ object.title }}</a></h2>
               <p class="meta">
                   <b>{{ object.created_at }}</b>
@@ -14,6 +14,9 @@
               <p>
                   {{ object.body|safe }}
               </p>
+          </div>
+          <div class="col-sm-4">
+              <img class="img-responsive" src="{{ object.image_preview.url }}">
           </div>
         </div>
     </div>
