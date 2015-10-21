@@ -3,45 +3,45 @@
 {% load static i18n %}
 
 {% block content %}
-<div class="container">
-  <img class="img-responsive blog-header" src="{% static 'images/uksed-header-name.jpg' %}" alt="">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <h4>
-                Have patience with everything in your heart…love the
-                questions themselves as if they were locked rooms or
-                books in a very foreign language…..the point is, to live
-                everything. Live the questions now. Perhaps, someday, you
-                will gradually, without even noticing it, live your way into
-                the answer…..
-                <br><br>
-                from Letters to a Young Poet, by Rilke
-            </h4>
-        </div>
-    </div>
-</div>
-{% for post in posts %}
+  <div class="container">
+    <img class="img-responsive blog-header" src="{% static 'images/uksed-header-name.jpg' %}" alt="">
+      <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+              <h4>
+                  Have patience with everything in your heart…love the
+                  questions themselves as if they were locked rooms or
+                  books in a very foreign language…..the point is, to live
+                  everything. Live the questions now. Perhaps, someday, you
+                  will gradually, without even noticing it, live your way into
+                  the answer…..
+                  <br><br>
+                  from Letters to a Young Poet, by Rilke
+              </h4>
+          </div>
+      </div>
+  </div>
+  {% for post in posts %}
     <div class="post">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h2><a href="{% url 'entry_detail' slug=post.slug %}">{{ post.title }}</a></h2>
-                    <p class="meta">
-                        <b>{{ post.created_at }}</b>
-                    </p>
-                    <p>
-                        {{ post.body|safe|truncatechars_html:440 }}
-                    </p>
-                    <div class="read-more pull-right">
-                        <a href="{% url 'entry_detail' slug=post.slug %}">Read More</a>
-                    </div>
-                </div>
-                <div id="individual-blog-image" class="col-md-4">
-                    <img class="img-responsive" src="{{ post.image_preview.url }}">
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2><a href="{% url 'entry_detail' slug=post.slug %}">{{ post.title }}</a></h2>
+            <p class="meta">
+              <b>{{ post.created_at }}</b>
+            </p>
+            <p>
+              {{ post.body|safe|truncatechars_html:440 }}
+            </p>
+            <div class="read-more pull-right">
+              <a href="{% url 'entry_detail' slug=post.slug %}">Read More</a>
             </div>
+          </div>
+          <div id="individual-blog-image" class="col-md-4">
+            <img class="img-responsive" src="{{ post.image_preview.url }}">
+          </div>
         </div>
+      </div>
     </div>
-{% endfor %}
+  {% endfor %}
 
 {% endblock %}

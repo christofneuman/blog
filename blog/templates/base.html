@@ -9,14 +9,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kylliki Neuman</title>
 
-    <!-- Bootstrap -->
-
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
 
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -28,53 +23,43 @@
 
   </head>
   <body id="page-top" class="index">
-    <!-- Navigation -->
     <div class="hero">
       <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header page-scroll">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" name="page-top" href="{% url 'home' %}">
-                    <img src="{% static 'images/logo.png' %}" alt="">
-                  </a>
-              </div>
-
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="hidden">
-                    <a href="{% url 'home' %}#page-top"></a>
-                  </li>
-                  <li class="page-scroll">
-                    <a href="{% url 'home' %}#about">About</a>
-                  </li>
-                  <li class="page-scroll">
-                    <a href="{% url 'home' %}#contact">Contact</a>
-                  </li>
-                  <li class="page-scroll">
-                    <a href="{% url 'resources' %}">Resources</a>
-                  </li>
-                  <li class="page-scroll">
-                    <a href="{% url 'blog' %}">Blog</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- /.navbar-collapse -->
+        <div class="container">
+          <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" name="page-top" href="{% url 'home' %}">
+              <img src="{% static 'images/logo.png' %}" alt="">
+            </a>
           </div>
-          <!-- /.container-fluid -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="hidden">
+                <a href="{% url 'home' %}#page-top"></a>
+              </li>
+              <li class="page-scroll">
+                <a href="{% url 'home' %}#about">About</a>
+              </li>
+              <li class="page-scroll">
+                <a href="{% url 'home' %}#contact">Contact</a>
+              </li>
+              <li class="page-scroll">
+                <a href="{% url 'resources' %}">Resources</a>
+              </li>
+              <li class="page-scroll">
+                <a href="{% url 'blog' %}">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      </div>
-
-        {% block content %}{% endblock %}
-
-
-    <!-- Footer -->
+    </div>
+    {% block content %}{% endblock %}
     <footer class="text-center footer">
       <div class="container">
         <div class="row">
@@ -106,18 +91,10 @@
         </div>
       </div>
     </footer>
-
-
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visible-sm pull-right">
       <a class="btn btn-top" href="#page-top">
         Back to top <i class="fa fa-chevron-up"></i>
       </a>
     </div>
-
-
-
-
   </body>
 </html>
