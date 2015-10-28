@@ -54,6 +54,11 @@ header, section {
   text-align: center;
 }
 
+#about .col-sm-4 p {
+  color: #a9a9a9;
+  font-style: italic;
+}
+
 #skype-me {
   text-align: center;
   font-size: 18px;
