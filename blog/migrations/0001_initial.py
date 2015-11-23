@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('title', models.CharField(max_length=100)),
                 ('slug', models.SlugField(max_length=200, unique=True, null=True)),
-                ('image_preview', models.ImageField(upload_to=b'/Users/christofneuman/Desktop/MOM/blog/media')),
+                ('image_preview', models.ImageField(upload_to=b'blogs')),
                 ('body', redactor.fields.RedactorField(verbose_name='Text')),
                 ('published', models.BooleanField(default=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
@@ -36,6 +36,9 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=100)),
                 ('email', models.EmailField(max_length=254)),
                 ('message', models.CharField(max_length=800)),
+                ('sent_at', models.DateTimeField(null=True, blank=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
             ],
         ),
     ]
