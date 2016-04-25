@@ -66,6 +66,10 @@ header, section {
   font-style: italic;
 }
 
+.email {
+  color: #947b9a;
+}
+
 #contact label {
   font-weight: 400;
 
@@ -94,40 +98,59 @@ header, section {
 }
 
 .portfolio-item a {
-    color: #009999;
+  color: #009999;
 }
 
-.portfolio-item a:hover {
+.portfolio-item a:hover, .portfolio-item a:focus {
   color: #947b9a;
+  text-decoration: none;
 }
 
 .modal_holder1 {
-    background: url('/static/images/varav.jpg') center no-repeat;
-    height: 200px;
-    margin-bottom: 5px;
+  background: url('/static/images/varav.jpg') center no-repeat;
+  height: 200px;
+  margin-bottom: 5px;
 }
 
 .modal_holder1:hover {
-    opacity: .8;
+  opacity: .8;
 }
 
 .modal_holder2 {
-    background: url('/static/images/siniallikad.jpg') center no-repeat;
-    height: 200px;
-    margin-bottom: 5px;
+  background: url('/static/images/siniallikad.jpg') center no-repeat;
+  height: 200px;
+  margin-bottom: 5px;
 }
 
 .modal_holder2:hover {
-    opacity: .8;
+  opacity: .8;
 }
 
 .modal_holder3 {
-    background: url('/static/images/pilved.jpg') center no-repeat;
-    height: 200px;
-    margin-bottom: 5px;
+  background: url('/static/images/pilved.jpg') center no-repeat;
+  height: 200px;
+  margin-bottom: 5px;
 }
 
 .modal_holder3:hover {
+    opacity: .8;
+}
+
+.modal_holder4 {
+  margin-top: 30px;
+  background: url('/static/images/dream-constelations.jpg') center no-repeat;
+  background-size: contain;
+  height: 200px;
+  margin-bottom: 5px;
+}
+
+@media(max-width: 767px) {
+  .modal_holder4 {
+    margin-top: 0;
+  }
+}
+
+.modal_holder4:hover {
     opacity: .8;
 }
 

@@ -2,5 +2,3 @@ django
 django-wysiwyg-redactor
 pillow
 psycopg2
-
-django-widget-tweaks

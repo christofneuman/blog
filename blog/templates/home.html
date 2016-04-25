@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load static widget_tweaks %}
+{% load static %}
 
 {% block content %}
 <header id="header"> <!-- look at the flower background header -->
@@ -46,6 +46,16 @@
         </a>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-12 portfolio-item">
+        <a href="#portfolioModal4" class="portfolio-link text-center" data-toggle="modal">
+          <div class="modal_holder4">
+          </div>
+          <p>Dream Constelations</p>
+          <img class="img-responsive hr-image" src="{% static 'images/hr-image.jpg' %}" alt="">
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 <section class="success" id="about">
@@ -78,16 +88,17 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 col-md-offset-2 text-center">
         <h4> To clarify if Kylliki can support you on your healing journey, call 310.633.0794</h4>
         <p id="skype-me">
           Kylliki also does sessions on Skype and FaceTime.
         </p>
+        <a class="email" href="mailto:kyllikineuman@gmail.com">Contact me</a>
       </div>
     </div>
   </div>
 </section>
-<section id="contact">
+<!-- <section id="contact">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -97,43 +108,11 @@
     </div>
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
-        <form id="contactForm" method="post">{% csrf_token %}
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Name</label>
-              {{ form.name|add_class:"form-control input-lg" }}
-              {{ form.name.errors }}
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Email Address</label>
-              {{ form.email|add_class:"form-control input-lg" }}
-              {{ form.email.errors }}
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Message</label>
-              {{ form.message|add_class:"form-control input-lg" }}
-              {{ form.message.errors }}
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <br>
-          <div id="success"></div>
-          <div class="row">
-            <div class="form-group col-xs-12">
-              <button type="submit" class="btn btn-success btn-lg">Send</button>
-            </div>
-          </div>
-        </form>
+
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="container">
@@ -209,6 +188,58 @@
             </p>
             <p class="modal-skype">
               Skype and FaceTime sessions available.
+            </p>
+            <button style="float: left; margin-bottom: 40px;" type="button" class="btn btn-default visible-xs" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body">
+            <button style="float: left;" type="button" class="btn btn-default hidden-xs" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            <h2>Dream Constelations</h2>
+            <hr>
+            <!-- <img src="{% static 'images/pilvedN.jpg' %}" class="img-responsive img-centered" alt=""> -->
+            <p>
+              Dream constellation is a way to explore dreams using the constellation method. In family constellation we choose representatives from the group as the members of our family. In dream constellation, representatives stand in for dream figures. This way of working allows participants to bypass the thinking mind and go directly to the image and into the energy it carries. The movement on the constellation field makes the inner dream image visible in the outer material world. It shows where the energy is stagnant and offers new possibilities for opening the flow in the system.
+              <br><br>
+              We start with a dream image but we never know where the movement on the constellation field takes us. It could turn into playing out a family issue or it could show the relationship between our inner aspects, or it could play out as a healing ritual among many possibilities.
+              <br><br>
+              The experience of dream constellation could:
+              <br><br>
+              <ul>
+                <li>
+                  Decode messages in your dream
+                </li>
+                <li>
+                  Give a practical guidance for your next steps in life
+                </li>
+                <li>
+                  Support your therapeutic work with your therapist
+                </li>
+                <li>
+                  Assist integration of separated and/or rejected inner aspects
+                </li>
+                <li>
+                  Find forward movement in healing family patterns
+                </li>
+                <li>
+                  Offer healing experience on a somatic level
+                </li>
+              </ul>
+            </p>
+            <br />
+            <p class="modal-skype">
+              For more information or to reserve a working space call 310.633.0794 or email kyllikineuman@gmail.com.
+            </p>
+            <p>
+              You can also find a PDF document with suggestions for dreamwork on Resources page.
             </p>
             <button style="float: left; margin-bottom: 40px;" type="button" class="btn btn-default visible-xs" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
           </div>
