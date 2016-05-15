@@ -179,6 +179,11 @@ header, section {
   margin-bottom: 40px;
 }
 
+.modal-skype a {
+  color: #009999;
+  text-decoration: none;
+}
+
 /* blog page */
 
 .blog-header {
