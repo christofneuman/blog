@@ -202,6 +202,10 @@ header, section {
 #individual-blog-image {
   margin-top: 63px;
 }
+small.credit {
+  color: #a9a9a9;
+  font-style: italic;
+}
 
 .post {
     padding-bottom: 50px;

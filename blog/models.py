@@ -19,6 +19,7 @@ class Blog(models.Model):
     title = CharField(max_length=100)
     slug = models.SlugField(max_length=200, unique=True, null=True)
     image_preview = models.ImageField(upload_to='blogs')
+    picture_credit = CharField(max_length=200, blank=True)
     body = RedactorField(
         verbose_name=u'Text',
         redactor_options={}
