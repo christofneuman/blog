@@ -38,7 +38,7 @@
           </div>
           <div id="individual-blog-image" class="col-md-4">
             <img class="img-responsive" src="{{ post.image_preview.url }}">
-            <small class="credit">Photo by {{ post.picture_credit }}</small>
+            <small class="credit">{% if post.picture_credit %}Photo by {{ post.picture_credit }}{% endif %}</small>
           </div>
         </div>
       </div>
