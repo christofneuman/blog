@@ -70,6 +70,10 @@ header, section {
   color: #947b9a;
 }
 
+.email:hover, .email:active, .email:focus {
+  text-decoration: none;
+}
+
 #contact label {
   font-weight: 400;
 
