@@ -70,7 +70,7 @@ header, section {
   color: #947b9a;
 }
 
-.email:hover, .email:active, .email:focus {
+a.email:hover, a.email:active, a.email:focus {
   text-decoration: none;
 }
 
